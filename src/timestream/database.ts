@@ -2,6 +2,7 @@ import { IKey } from "@aws-cdk/aws-kms";
 import { CfnDatabase } from "@aws-cdk/aws-timestream";
 import { Construct, Resource } from "@aws-cdk/core";
 import { IDatabase } from "./database-ref";
+import { AddTableOptions, Table } from "./table";
 
 export interface DatabaseProps {
   readonly databaseName?: string;
@@ -25,5 +26,12 @@ export class Database extends Resource implements IDatabase {
     });
     this.databaseArn = this.resource.attrArn;
     this.databaseName = this.resource.ref;
+  }
+
+  /**
+   *
+   */
+  public addTable(id: string, options?: AddTableOptions): Table {
+    return new Table(this, id, { database: this, ...options });
   }
 }
