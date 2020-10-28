@@ -1,6 +1,6 @@
 import { IKey } from "@aws-cdk/aws-kms";
 import { CfnDatabase } from "@aws-cdk/aws-timestream";
-import { Construct, Resource } from "@aws-cdk/core";
+import { Construct, Fn, Resource } from "@aws-cdk/core";
 import { IDatabase } from "./database-ref";
 import { AddTableOptions, Table } from "./table";
 
@@ -31,7 +31,29 @@ export class Database extends Resource implements IDatabase {
   /**
    *
    */
+  public static fromDatabaseArn(
+    scope: Construct,
+    id: string,
+    databaseArn: string
+  ): IDatabase {
+    return new ImportedDatabase(scope, id, databaseArn);
+  }
+
+  /**
+   *
+   */
   public addTable(id: string, options?: AddTableOptions): Table {
     return new Table(this, id, { database: this, ...options });
+  }
+}
+
+class ImportedDatabase extends Resource implements IDatabase {
+  public readonly databaseArn: string;
+  public readonly databaseName: string;
+
+  constructor(scope: Construct, id: string, databaseArn: string) {
+    super(scope, id);
+    this.databaseArn = databaseArn;
+    this.databaseName = Fn.select(1, Fn.split("/", databaseArn));
   }
 }

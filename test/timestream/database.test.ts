@@ -45,4 +45,33 @@ describe("Database", () => {
       });
     });
   });
+
+  describe("fromDatabaseArn", () => {
+    test("ok", () => {
+      const app = new App();
+      const databaseArn = ((): string => {
+        const stack = new Stack(app, "src");
+        const db = new Database(stack, "DB");
+        return db.databaseArn;
+      })();
+      const stack = new Stack(app);
+      const db = Database.fromDatabaseArn(stack, "ImportedDB", databaseArn);
+      expect(stack.resolve(db.databaseArn)).toStrictEqual({
+        "Fn::GetAtt": ["DB4924F778", "Arn"],
+      });
+      expect(stack.resolve(db.databaseName)).toStrictEqual({
+        "Fn::Select": [
+          1,
+          {
+            "Fn::Split": [
+              "/",
+              {
+                "Fn::GetAtt": ["DB4924F778", "Arn"],
+              },
+            ],
+          },
+        ],
+      });
+    });
+  });
 });
