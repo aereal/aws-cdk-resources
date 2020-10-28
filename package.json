@@ -42,6 +42,7 @@
     "semantic-release": "semantic-release"
   },
   "peerDependencies": {
+    "@aws-cdk/aws-timestream": "^1.70.0",
     "@aws-cdk/core": "^1.70.0"
   },
   "devDependencies": {
