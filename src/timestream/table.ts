@@ -1,6 +1,8 @@
+import { Grant, IGrantable } from "@aws-cdk/aws-iam";
 import { CfnTable } from "@aws-cdk/aws-timestream";
 import { Construct, Duration, Resource } from "@aws-cdk/core";
 import { IDatabase } from "./database-ref";
+import { TableAction, tableReadActions, tableWriteActions } from "./iam";
 import { ITable } from "./table-ref";
 
 export interface TableRetention {
@@ -48,5 +50,30 @@ export class Table extends Resource implements ITable {
     }));
 
     this.tableArn = resource.attrArn;
+  }
+
+  /**
+   *
+   */
+  public grant(grantee: IGrantable, ...actions: TableAction[]): Grant {
+    return Grant.addToPrincipal({
+      grantee,
+      resourceArns: [this.tableArn],
+      actions,
+    });
+  }
+
+  /**
+   *
+   */
+  public grantRead(grantee: IGrantable): Grant {
+    return this.grant(grantee, ...tableReadActions);
+  }
+
+  /**
+   *
+   */
+  public grantWrite(grantee: IGrantable): Grant {
+    return this.grant(grantee, ...tableWriteActions);
   }
 }

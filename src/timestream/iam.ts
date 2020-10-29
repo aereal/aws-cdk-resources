@@ -34,3 +34,17 @@ export const databaseWriteActions = [
 export type DatabaseWriteAction = typeof databaseWriteActions[number];
 
 export type DatabaseAction = DatabaseReadAction | DatabaseWriteAction;
+
+export const tableReadActions = [
+  "timestream:Select",
+  "timestream:ListMeasures",
+  "timestream:DescribeTable",
+] as const;
+
+export type TableReadAction = typeof tableReadActions[number];
+
+export const tableWriteActions = ["timestream:WriteRecords"] as const;
+
+export type TableWriteAction = typeof tableWriteActions[number];
+
+export type TableAction = TableReadAction | TableWriteAction;
