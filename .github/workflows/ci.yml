@@ -55,6 +55,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+      -
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - name: install npm 7
+        run: npm i -g npm@7
+      - name: install
+        run: npm ci
       - name: lint
         uses: reviewdog/action-eslint@v1
   coverage:
