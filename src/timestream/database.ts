@@ -13,6 +13,7 @@ import {
   globalWriteActions,
 } from "./iam";
 import { Table } from "./table";
+import { ITable } from "./table-ref";
 
 abstract class DatabaseBase extends Resource implements IDatabase {
   public abstract readonly databaseName: string;
@@ -41,6 +42,13 @@ abstract class DatabaseBase extends Resource implements IDatabase {
    */
   public grantWrite(grantee: IGrantable): Grant {
     return this.grant(grantee, ...databaseWriteActions);
+  }
+
+  /**
+   *
+   */
+  public addTable(id: string, options?: AddTableOptions): ITable {
+    return new Table(this, id, { database: this, ...options });
   }
 }
 
@@ -102,13 +110,6 @@ export class Database extends DatabaseBase {
    */
   public static grantWrite(grantee: IGrantable): Grant {
     return Database.grant(grantee, ...globalWriteActions);
-  }
-
-  /**
-   *
-   */
-  public addTable(id: string, options?: AddTableOptions): Table {
-    return new Table(this, id, { database: this, ...options });
   }
 }
 
