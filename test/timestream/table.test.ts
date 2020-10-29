@@ -33,6 +33,18 @@ describe("Table", () => {
     });
   });
 
+  test("fromTableArn", () => {
+    const stack = new Stack();
+    const table = Table.fromTableArn(
+      stack,
+      "Table",
+      "arn:aws:timestream:us-east-1:1234567890:database/dbName/table/tableName"
+    );
+    expect(table.tableArn).toEqual(
+      "arn:aws:timestream:us-east-1:1234567890:database/dbName/table/tableName"
+    );
+  });
+
   describe("IAM actions", () => {
     test("grantRead", () => {
       const stack = new Stack();

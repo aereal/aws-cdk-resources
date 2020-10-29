@@ -71,4 +71,24 @@ export class Table extends TableBase {
 
     this.tableArn = resource.attrArn;
   }
+
+  /**
+   *
+   */
+  public static fromTableArn(
+    scope: Construct,
+    id: string,
+    tableArn: string
+  ): ITable {
+    return new ImportedTable(scope, id, tableArn);
+  }
+}
+
+class ImportedTable extends TableBase {
+  public readonly tableArn: string;
+
+  constructor(scope: Construct, id: string, tableArn: string) {
+    super(scope, id);
+    this.tableArn = tableArn;
+  }
 }
