@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
+    "declaration": true,
     "forceConsistentCasingInFileNames": true,
     "lib": ["es2018"],
     "module": "commonjs",
