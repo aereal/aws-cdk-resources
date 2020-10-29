@@ -1,19 +1,10 @@
 import { Grant, IGrantable } from "@aws-cdk/aws-iam";
 import { CfnTable } from "@aws-cdk/aws-timestream";
-import { Construct, Duration, Resource } from "@aws-cdk/core";
+import { Construct, Resource } from "@aws-cdk/core";
+import { AddTableOptions } from "./add-table-options";
 import { IDatabase } from "./database-ref";
 import { TableAction, tableReadActions, tableWriteActions } from "./iam";
 import { ITable } from "./table-ref";
-
-export interface TableRetention {
-  readonly memoryStoreRetentionPeriod: Duration;
-  readonly magneticStoreRetentionPeriod: Duration;
-}
-
-export interface AddTableOptions {
-  readonly tableName?: string;
-  readonly retention?: TableRetention;
-}
 
 export interface TableProps extends AddTableOptions {
   readonly database: IDatabase;

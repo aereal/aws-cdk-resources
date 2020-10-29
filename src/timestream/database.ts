@@ -2,6 +2,7 @@ import { Grant, IGrantable } from "@aws-cdk/aws-iam";
 import { IKey } from "@aws-cdk/aws-kms";
 import { CfnDatabase } from "@aws-cdk/aws-timestream";
 import { Construct, Fn, Resource } from "@aws-cdk/core";
+import { AddTableOptions } from "./add-table-options";
 import { IDatabase } from "./database-ref";
 import {
   DatabaseAction,
@@ -11,7 +12,7 @@ import {
   globalReadActions,
   globalWriteActions,
 } from "./iam";
-import { AddTableOptions, Table } from "./table";
+import { Table } from "./table";
 
 abstract class DatabaseBase extends Resource implements IDatabase {
   public abstract readonly databaseName: string;
