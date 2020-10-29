@@ -8,9 +8,15 @@ describe("Table", () => {
     const app = new App();
     const stack = new Stack(app);
     const database = new Database(stack, "DB");
-    new Table(stack, "Table", { database });
+    const table = new Table(stack, "Table", { database });
 
     expect(stack).toHaveResource("AWS::Timestream::Table", {});
+    expect(stack.resolve(table.tableName)).toStrictEqual({
+      "Fn::Select": [
+        3,
+        { "Fn::Split": ["/", { "Fn::GetAtt": ["TableCD117FA1", "Arn"] }] },
+      ],
+    });
   });
 
   test("with retention", () => {
@@ -43,6 +49,7 @@ describe("Table", () => {
     expect(table.tableArn).toEqual(
       "arn:aws:timestream:us-east-1:1234567890:database/dbName/table/tableName"
     );
+    expect(stack.resolve(table.tableName)).toStrictEqual("tableName");
   });
 
   describe("IAM actions", () => {
