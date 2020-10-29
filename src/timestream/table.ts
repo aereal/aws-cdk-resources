@@ -6,6 +6,35 @@ import { IDatabase } from "./database-ref";
 import { TableAction, tableReadActions, tableWriteActions } from "./iam";
 import { ITable } from "./table-ref";
 
+abstract class TableBase extends Resource implements ITable {
+  public abstract readonly tableArn: string;
+
+  /**
+   *
+   */
+  public grant(grantee: IGrantable, ...actions: TableAction[]): Grant {
+    return Grant.addToPrincipal({
+      grantee,
+      resourceArns: [this.tableArn],
+      actions,
+    });
+  }
+
+  /**
+   *
+   */
+  public grantRead(grantee: IGrantable): Grant {
+    return this.grant(grantee, ...tableReadActions);
+  }
+
+  /**
+   *
+   */
+  public grantWrite(grantee: IGrantable): Grant {
+    return this.grant(grantee, ...tableWriteActions);
+  }
+}
+
 export interface TableProps extends AddTableOptions {
   readonly database: IDatabase;
 }
@@ -13,7 +42,7 @@ export interface TableProps extends AddTableOptions {
 /**
  *
  */
-export class Table extends Resource implements ITable {
+export class Table extends TableBase {
   public readonly tableArn: string;
 
   constructor(scope: Construct, id: string, props: TableProps) {
@@ -41,30 +70,5 @@ export class Table extends Resource implements ITable {
     }));
 
     this.tableArn = resource.attrArn;
-  }
-
-  /**
-   *
-   */
-  public grant(grantee: IGrantable, ...actions: TableAction[]): Grant {
-    return Grant.addToPrincipal({
-      grantee,
-      resourceArns: [this.tableArn],
-      actions,
-    });
-  }
-
-  /**
-   *
-   */
-  public grantRead(grantee: IGrantable): Grant {
-    return this.grant(grantee, ...tableReadActions);
-  }
-
-  /**
-   *
-   */
-  public grantWrite(grantee: IGrantable): Grant {
-    return this.grant(grantee, ...tableWriteActions);
   }
 }
