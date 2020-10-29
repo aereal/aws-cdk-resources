@@ -135,5 +135,65 @@ describe("Database", () => {
         ],
       });
     });
+
+    test("grantRead", () => {
+      const stack = new Stack();
+      const user = new User(stack, "User");
+      const db = new Database(stack, "DB");
+      db.grantRead(user);
+
+      expect(stack).toHaveResource("AWS::IAM::Policy", {
+        PolicyDocument: {
+          Version: "2012-10-17",
+          Statement: [
+            {
+              Action: [
+                "timestream:ListTables",
+                "timestream:DescribeDatabase",
+                "timestream:ListDatabases",
+              ],
+              Effect: "Allow",
+              Resource: { "Fn::GetAtt": ["DB4924F778", "Arn"] },
+            },
+          ],
+        },
+        PolicyName: "UserDefaultPolicy1F97781E",
+        Users: [
+          {
+            Ref: "User00B015A1",
+          },
+        ],
+      });
+    });
+
+    test("grantWrite", () => {
+      const stack = new Stack();
+      const user = new User(stack, "User");
+      const db = new Database(stack, "DB");
+      db.grantWrite(user);
+
+      expect(stack).toHaveResource("AWS::IAM::Policy", {
+        PolicyDocument: {
+          Version: "2012-10-17",
+          Statement: [
+            {
+              Action: [
+                "timestream:CreateTable",
+                "timestream:DeleteTable",
+                "timestream:UpdateTable",
+              ],
+              Effect: "Allow",
+              Resource: { "Fn::GetAtt": ["DB4924F778", "Arn"] },
+            },
+          ],
+        },
+        PolicyName: "UserDefaultPolicy1F97781E",
+        Users: [
+          {
+            Ref: "User00B015A1",
+          },
+        ],
+      });
+    });
   });
 });

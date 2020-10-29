@@ -3,7 +3,14 @@ import { IKey } from "@aws-cdk/aws-kms";
 import { CfnDatabase } from "@aws-cdk/aws-timestream";
 import { Construct, Fn, Resource } from "@aws-cdk/core";
 import { IDatabase } from "./database-ref";
-import { GlobalAction, globalReadActions, globalWriteActions } from "./iam";
+import {
+  DatabaseAction,
+  GlobalAction,
+  databaseReadActions,
+  databaseWriteActions,
+  globalReadActions,
+  globalWriteActions,
+} from "./iam";
 import { AddTableOptions, Table } from "./table";
 
 export interface DatabaseProps {
@@ -71,6 +78,31 @@ export class Database extends Resource implements IDatabase {
    */
   public addTable(id: string, options?: AddTableOptions): Table {
     return new Table(this, id, { database: this, ...options });
+  }
+
+  /**
+   *
+   */
+  public grant(grantee: IGrantable, ...actions: DatabaseAction[]): Grant {
+    return Grant.addToPrincipal({
+      grantee,
+      resourceArns: [this.databaseArn],
+      actions,
+    });
+  }
+
+  /**
+   *
+   */
+  public grantRead(grantee: IGrantable): Grant {
+    return this.grant(grantee, ...databaseReadActions);
+  }
+
+  /**
+   *
+   */
+  public grantWrite(grantee: IGrantable): Grant {
+    return this.grant(grantee, ...databaseWriteActions);
   }
 }
 
