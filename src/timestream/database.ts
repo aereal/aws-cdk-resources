@@ -13,6 +13,36 @@ import {
 } from "./iam";
 import { AddTableOptions, Table } from "./table";
 
+abstract class DatabaseBase extends Resource implements IDatabase {
+  public abstract readonly databaseName: string;
+  public abstract readonly databaseArn: string;
+
+  /**
+   *
+   */
+  public grant(grantee: IGrantable, ...actions: DatabaseAction[]): Grant {
+    return Grant.addToPrincipal({
+      grantee,
+      resourceArns: [this.databaseArn],
+      actions,
+    });
+  }
+
+  /**
+   *
+   */
+  public grantRead(grantee: IGrantable): Grant {
+    return this.grant(grantee, ...databaseReadActions);
+  }
+
+  /**
+   *
+   */
+  public grantWrite(grantee: IGrantable): Grant {
+    return this.grant(grantee, ...databaseWriteActions);
+  }
+}
+
 export interface DatabaseProps {
   readonly databaseName?: string;
   readonly key?: IKey;
@@ -21,7 +51,7 @@ export interface DatabaseProps {
 /**
  *
  */
-export class Database extends Resource implements IDatabase {
+export class Database extends DatabaseBase {
   public databaseName: string;
   public readonly databaseArn: string;
   private readonly resource: CfnDatabase;
@@ -79,34 +109,9 @@ export class Database extends Resource implements IDatabase {
   public addTable(id: string, options?: AddTableOptions): Table {
     return new Table(this, id, { database: this, ...options });
   }
-
-  /**
-   *
-   */
-  public grant(grantee: IGrantable, ...actions: DatabaseAction[]): Grant {
-    return Grant.addToPrincipal({
-      grantee,
-      resourceArns: [this.databaseArn],
-      actions,
-    });
-  }
-
-  /**
-   *
-   */
-  public grantRead(grantee: IGrantable): Grant {
-    return this.grant(grantee, ...databaseReadActions);
-  }
-
-  /**
-   *
-   */
-  public grantWrite(grantee: IGrantable): Grant {
-    return this.grant(grantee, ...databaseWriteActions);
-  }
 }
 
-class ImportedDatabase extends Resource implements IDatabase {
+class ImportedDatabase extends DatabaseBase {
   public readonly databaseArn: string;
   public readonly databaseName: string;
 
