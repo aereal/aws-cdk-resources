@@ -1,7 +1,9 @@
+import { Grant, IGrantable } from "@aws-cdk/aws-iam";
 import { IKey } from "@aws-cdk/aws-kms";
 import { CfnDatabase } from "@aws-cdk/aws-timestream";
 import { Construct, Fn, Resource } from "@aws-cdk/core";
 import { IDatabase } from "./database-ref";
+import { GlobalAction, globalReadActions, globalWriteActions } from "./iam";
 import { AddTableOptions, Table } from "./table";
 
 export interface DatabaseProps {
@@ -37,6 +39,31 @@ export class Database extends Resource implements IDatabase {
     databaseArn: string
   ): IDatabase {
     return new ImportedDatabase(scope, id, databaseArn);
+  }
+
+  /**
+   *
+   */
+  public static grant(grantee: IGrantable, ...actions: GlobalAction[]): Grant {
+    return Grant.addToPrincipal({
+      grantee,
+      resourceArns: ["*"],
+      actions,
+    });
+  }
+
+  /**
+   *
+   */
+  public static grantRead(grantee: IGrantable): Grant {
+    return Database.grant(grantee, ...globalReadActions);
+  }
+
+  /**
+   *
+   */
+  public static grantWrite(grantee: IGrantable): Grant {
+    return Database.grant(grantee, ...globalWriteActions);
   }
 
   /**

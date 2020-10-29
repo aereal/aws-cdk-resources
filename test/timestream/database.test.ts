@@ -1,3 +1,4 @@
+import { User } from "@aws-cdk/aws-iam";
 import { Key } from "@aws-cdk/aws-kms";
 import { App, Duration, Stack } from "@aws-cdk/core";
 import { Database } from "../../src/timestream";
@@ -69,6 +70,67 @@ describe("Database", () => {
                 "Fn::GetAtt": ["DB4924F778", "Arn"],
               },
             ],
+          },
+        ],
+      });
+    });
+  });
+
+  describe("IAM actions", () => {
+    test("grantRead", () => {
+      const stack = new Stack();
+      const user = new User(stack, "User");
+      Database.grantRead(user);
+
+      expect(stack).toHaveResource("AWS::IAM::Policy", {
+        PolicyDocument: {
+          Version: "2012-10-17",
+          Statement: [
+            {
+              Action: [
+                "timestream:DescribeEndpoints",
+                "timestream:ListDatabases",
+              ],
+              Effect: "Allow",
+              Resource: "*",
+            },
+          ],
+        },
+        PolicyName: "UserDefaultPolicy1F97781E",
+        Users: [
+          {
+            Ref: "User00B015A1",
+          },
+        ],
+      });
+    });
+
+    test("Database.grantWrite", () => {
+      const stack = new Stack();
+      const user = new User(stack, "User");
+      Database.grantWrite(user);
+
+      expect(stack).toHaveResource("AWS::IAM::Policy", {
+        PolicyDocument: {
+          Version: "2012-10-17",
+          Statement: [
+            {
+              Action: [
+                "timestream:CancelQuery",
+                "timestream:SelectValues",
+                "timestream:CreateDatabase",
+                "timestream:DeleteDatabase",
+                "timestream:UpdateDatabase",
+              ],
+              Effect: "Allow",
+              Resource: "*",
+            },
+          ],
+        },
+        PolicyName: "UserDefaultPolicy1F97781E",
+        Users: [
+          {
+            Ref: "User00B015A1",
           },
         ],
       });
