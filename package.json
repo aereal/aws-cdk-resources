@@ -38,7 +38,7 @@
     "build": "tsc -p .",
     "test": "jest",
     "test:ci": "jest --collectCoverage --coverageDirectory ./coverage",
-    "docs": "rm -rf docs/ && typedoc ./src",
+    "docs": "rm -rf docs/ && typedoc ./src/index.ts",
     "semantic-release": "semantic-release"
   },
   "peerDependencies": {
