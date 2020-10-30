@@ -1,5 +1,5 @@
 {
-  "mode": "modules",
+  "mode": "library",
   "theme": "minimal",
   "excludeNotExported": true,
   "excludeExternals": true,
