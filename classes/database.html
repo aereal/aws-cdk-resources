@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@aereal/aws-cdk-resources | @aereal/aws-cdk-resources</title>
+	<title>Database | @aereal/aws-cdk-resources</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -2335,7 +2335,7 @@ img {
 		<div class="container">
 			<div class="table-wrap">
 				<div class="table-cell">
-					<strong><a href="index.html">@aereal/aws-cdk-resources</a></strong>
+					<strong><a href="../index.html">@aereal/aws-cdk-resources</a></strong>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -2363,242 +2363,976 @@ img {
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class=" tsd-kind-class">
-			<a href="classes/database.html" class="tsd-kind-icon">Database</a>
+		<li class="current tsd-kind-class">
+			<a href="database.html" class="tsd-kind-icon">Database</a>
+			<ul>
+				<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+					<a href="database.html#constructor" class="tsd-kind-icon">constructor</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a href="database.html#databasearn" class="tsd-kind-icon">database<wbr>Arn</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a href="database.html#databasename" class="tsd-kind-icon">database<wbr>Name</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a href="database.html#env" class="tsd-kind-icon">env</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a href="database.html#node" class="tsd-kind-icon">node</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a href="database.html#physicalname" class="tsd-kind-icon">physical<wbr>Name</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a href="database.html#stack" class="tsd-kind-icon">stack</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a href="database.html#addtable" class="tsd-kind-icon">add<wbr>Table</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a href="database.html#generatephysicalname" class="tsd-kind-icon">generate<wbr>Physical<wbr>Name</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a href="database.html#getresourcearnattribute" class="tsd-kind-icon">get<wbr>Resource<wbr>Arn<wbr>Attribute</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a href="database.html#getresourcenameattribute" class="tsd-kind-icon">get<wbr>Resource<wbr>Name<wbr>Attribute</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a href="database.html#grant" class="tsd-kind-icon">grant</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a href="database.html#grantread" class="tsd-kind-icon">grant<wbr>Read</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a href="database.html#grantwrite" class="tsd-kind-icon">grant<wbr>Write</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
+					<a href="database.html#onprepare" class="tsd-kind-icon">on<wbr>Prepare</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
+					<a href="database.html#onsynthesize" class="tsd-kind-icon">on<wbr>Synthesize</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
+					<a href="database.html#onvalidate" class="tsd-kind-icon">on<wbr>Validate</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a href="database.html#prepare" class="tsd-kind-icon">prepare</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a href="database.html#synthesize" class="tsd-kind-icon">synthesize</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a href="database.html#tostring" class="tsd-kind-icon">to<wbr>String</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a href="database.html#validate" class="tsd-kind-icon">validate</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a href="database.html#fromdatabasearn" class="tsd-kind-icon">from<wbr>Database<wbr>Arn</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a href="database.html#grant-1" class="tsd-kind-icon">grant</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a href="database.html#grantread-1" class="tsd-kind-icon">grant<wbr>Read</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a href="database.html#grantwrite-1" class="tsd-kind-icon">grant<wbr>Write</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a href="database.html#isconstruct" class="tsd-kind-icon">is<wbr>Construct</a>
+				</li>
+			</ul>
 		</li>
 		<li class=" tsd-kind-class">
-			<a href="classes/table.html" class="tsd-kind-icon">Table</a>
+			<a href="table.html" class="tsd-kind-icon">Table</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="interfaces/addtableoptions.html" class="tsd-kind-icon">Add<wbr>Table<wbr>Options</a>
+			<a href="../interfaces/addtableoptions.html" class="tsd-kind-icon">Add<wbr>Table<wbr>Options</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="interfaces/databaseprops.html" class="tsd-kind-icon">Database<wbr>Props</a>
+			<a href="../interfaces/databaseprops.html" class="tsd-kind-icon">Database<wbr>Props</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="interfaces/idatabase.html" class="tsd-kind-icon">IDatabase</a>
+			<a href="../interfaces/idatabase.html" class="tsd-kind-icon">IDatabase</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="interfaces/itable.html" class="tsd-kind-icon">ITable</a>
+			<a href="../interfaces/itable.html" class="tsd-kind-icon">ITable</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="interfaces/tableprops.html" class="tsd-kind-icon">Table<wbr>Props</a>
+			<a href="../interfaces/tableprops.html" class="tsd-kind-icon">Table<wbr>Props</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="interfaces/tableretention.html" class="tsd-kind-icon">Table<wbr>Retention</a>
+			<a href="../interfaces/tableretention.html" class="tsd-kind-icon">Table<wbr>Retention</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
-			<a href="globals.html#databaseaction" class="tsd-kind-icon">Database<wbr>Action</a>
+			<a href="../globals.html#databaseaction" class="tsd-kind-icon">Database<wbr>Action</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
-			<a href="globals.html#databasereadaction" class="tsd-kind-icon">Database<wbr>Read<wbr>Action</a>
+			<a href="../globals.html#databasereadaction" class="tsd-kind-icon">Database<wbr>Read<wbr>Action</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
-			<a href="globals.html#databasewriteaction" class="tsd-kind-icon">Database<wbr>Write<wbr>Action</a>
+			<a href="../globals.html#databasewriteaction" class="tsd-kind-icon">Database<wbr>Write<wbr>Action</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
-			<a href="globals.html#globalaction" class="tsd-kind-icon">Global<wbr>Action</a>
+			<a href="../globals.html#globalaction" class="tsd-kind-icon">Global<wbr>Action</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
-			<a href="globals.html#globalreadaction" class="tsd-kind-icon">Global<wbr>Read<wbr>Action</a>
+			<a href="../globals.html#globalreadaction" class="tsd-kind-icon">Global<wbr>Read<wbr>Action</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
-			<a href="globals.html#globalwriteaction" class="tsd-kind-icon">Global<wbr>Write<wbr>Action</a>
+			<a href="../globals.html#globalwriteaction" class="tsd-kind-icon">Global<wbr>Write<wbr>Action</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
-			<a href="globals.html#tableaction" class="tsd-kind-icon">Table<wbr>Action</a>
+			<a href="../globals.html#tableaction" class="tsd-kind-icon">Table<wbr>Action</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
-			<a href="globals.html#tablereadaction" class="tsd-kind-icon">Table<wbr>Read<wbr>Action</a>
+			<a href="../globals.html#tablereadaction" class="tsd-kind-icon">Table<wbr>Read<wbr>Action</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
-			<a href="globals.html#tablewriteaction" class="tsd-kind-icon">Table<wbr>Write<wbr>Action</a>
+			<a href="../globals.html#tablewriteaction" class="tsd-kind-icon">Table<wbr>Write<wbr>Action</a>
 		</li>
 	</ul>
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
-		<div class="tsd-panel tsd-typography">
-			<a href="#aerealaws-cdk-resources" id="aerealaws-cdk-resources" style="color: inherit; text-decoration: none;">
-				<h1>@aereal/aws-cdk-resources</h1>
-			</a>
-			<p>My [AWS CDK][aws-cdk] resource constructs.</p>
-		</div>
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p>Provides a Timestream database</p>
+				</div>
+			</div>
+		</section>
+		<section class="tsd-panel tsd-hierarchy">
+			<h3>Hierarchy</h3>
+			<ul class="tsd-hierarchy">
+				<li>
+					<span class="tsd-signature-type">DatabaseBase</span>
+					<ul class="tsd-hierarchy">
+						<li>
+							<span class="target">Database</span>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section class="tsd-panel">
+			<h3>Implements</h3>
+			<ul class="tsd-hierarchy">
+				<li><span class="tsd-signature-type">IConstruct</span></li>
+				<li><span class="tsd-signature-type">IConstruct</span></li>
+				<li><span class="tsd-signature-type">IResource</span></li>
+				<li><a href="../interfaces/idatabase.html" class="tsd-signature-type">IDatabase</a></li>
+			</ul>
+		</section>
 		<section class="tsd-panel-group tsd-index-group">
 			<h2>Index</h2>
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
 					<section class="tsd-index-section ">
-						<h3>Classes</h3>
+						<h3>Constructors</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-class"><a href="classes/database.html" class="tsd-kind-icon">Database</a></li>
-							<li class="tsd-kind-class"><a href="classes/table.html" class="tsd-kind-icon">Table</a></li>
+							<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="database.html#constructor" class="tsd-kind-icon">constructor</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
-						<h3>Interfaces</h3>
+						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-interface"><a href="interfaces/addtableoptions.html" class="tsd-kind-icon">Add<wbr>Table<wbr>Options</a></li>
-							<li class="tsd-kind-interface"><a href="interfaces/databaseprops.html" class="tsd-kind-icon">Database<wbr>Props</a></li>
-							<li class="tsd-kind-interface"><a href="interfaces/idatabase.html" class="tsd-kind-icon">IDatabase</a></li>
-							<li class="tsd-kind-interface"><a href="interfaces/itable.html" class="tsd-kind-icon">ITable</a></li>
-							<li class="tsd-kind-interface"><a href="interfaces/tableprops.html" class="tsd-kind-icon">Table<wbr>Props</a></li>
-							<li class="tsd-kind-interface"><a href="interfaces/tableretention.html" class="tsd-kind-icon">Table<wbr>Retention</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="database.html#databasearn" class="tsd-kind-icon">database<wbr>Arn</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="database.html#databasename" class="tsd-kind-icon">database<wbr>Name</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="database.html#env" class="tsd-kind-icon">env</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="database.html#node" class="tsd-kind-icon">node</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="database.html#physicalname" class="tsd-kind-icon">physical<wbr>Name</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="database.html#stack" class="tsd-kind-icon">stack</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
-						<h3>Type aliases</h3>
+						<h3>Methods</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-type-alias"><a href="globals.html#databaseaction" class="tsd-kind-icon">Database<wbr>Action</a></li>
-							<li class="tsd-kind-type-alias"><a href="globals.html#databasereadaction" class="tsd-kind-icon">Database<wbr>Read<wbr>Action</a></li>
-							<li class="tsd-kind-type-alias"><a href="globals.html#databasewriteaction" class="tsd-kind-icon">Database<wbr>Write<wbr>Action</a></li>
-							<li class="tsd-kind-type-alias"><a href="globals.html#globalaction" class="tsd-kind-icon">Global<wbr>Action</a></li>
-							<li class="tsd-kind-type-alias"><a href="globals.html#globalreadaction" class="tsd-kind-icon">Global<wbr>Read<wbr>Action</a></li>
-							<li class="tsd-kind-type-alias"><a href="globals.html#globalwriteaction" class="tsd-kind-icon">Global<wbr>Write<wbr>Action</a></li>
-							<li class="tsd-kind-type-alias"><a href="globals.html#tableaction" class="tsd-kind-icon">Table<wbr>Action</a></li>
-							<li class="tsd-kind-type-alias"><a href="globals.html#tablereadaction" class="tsd-kind-icon">Table<wbr>Read<wbr>Action</a></li>
-							<li class="tsd-kind-type-alias"><a href="globals.html#tablewriteaction" class="tsd-kind-icon">Table<wbr>Write<wbr>Action</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="database.html#addtable" class="tsd-kind-icon">add<wbr>Table</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="database.html#generatephysicalname" class="tsd-kind-icon">generate<wbr>Physical<wbr>Name</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="database.html#getresourcearnattribute" class="tsd-kind-icon">get<wbr>Resource<wbr>Arn<wbr>Attribute</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="database.html#getresourcenameattribute" class="tsd-kind-icon">get<wbr>Resource<wbr>Name<wbr>Attribute</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="database.html#grant" class="tsd-kind-icon">grant</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="database.html#grantread" class="tsd-kind-icon">grant<wbr>Read</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="database.html#grantwrite" class="tsd-kind-icon">grant<wbr>Write</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected"><a href="database.html#onprepare" class="tsd-kind-icon">on<wbr>Prepare</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected"><a href="database.html#onsynthesize" class="tsd-kind-icon">on<wbr>Synthesize</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected"><a href="database.html#onvalidate" class="tsd-kind-icon">on<wbr>Validate</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="database.html#prepare" class="tsd-kind-icon">prepare</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="database.html#synthesize" class="tsd-kind-icon">synthesize</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="database.html#tostring" class="tsd-kind-icon">to<wbr>String</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="database.html#validate" class="tsd-kind-icon">validate</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="database.html#fromdatabasearn" class="tsd-kind-icon">from<wbr>Database<wbr>Arn</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="database.html#grant-1" class="tsd-kind-icon">grant</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="database.html#grantread-1" class="tsd-kind-icon">grant<wbr>Read</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="database.html#grantwrite-1" class="tsd-kind-icon">grant<wbr>Write</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="database.html#isconstruct" class="tsd-kind-icon">is<wbr>Construct</a></li>
 						</ul>
 					</section>
 				</div>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
-			<h2>Type aliases</h2>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias">
-				<a name="databaseaction" class="tsd-anchor"></a>
-				<h3>Database<wbr>Action</h3>
-				<div class="tsd-signature tsd-kind-icon">Database<wbr>Action<span class="tsd-signature-symbol">:</span> <a href="globals.html#databasereadaction" class="tsd-signature-type">DatabaseReadAction</a><span class="tsd-signature-symbol"> | </span><a href="globals.html#databasewriteaction" class="tsd-signature-type">DatabaseWriteAction</a></div>
+			<h2>Constructors</h2>
+			<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+				<a name="constructor" class="tsd-anchor"></a>
+				<h3>constructor</h3>
+				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+					<li class="tsd-signature tsd-kind-icon">new <wbr>Database<span class="tsd-signature-symbol">(</span>scope<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Construct</span>, id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, props<span class="tsd-signature-symbol">?: </span><a href="../interfaces/databaseprops.html" class="tsd-signature-type">DatabaseProps</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="database.html" class="tsd-signature-type">Database</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Overrides Resource.__constructor</p>
+							<ul>
+								<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/database.ts#L88">src/timestream/database.ts:88</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>scope: <span class="tsd-signature-type">Construct</span></h5>
+							</li>
+							<li>
+								<h5>id: <span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> props: <a href="../interfaces/databaseprops.html" class="tsd-signature-type">DatabaseProps</a></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="database.html" class="tsd-signature-type">Database</a></h4>
+					</li>
+				</ul>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Properties</h2>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+				<a name="databasearn" class="tsd-anchor"></a>
+				<h3>database<wbr>Arn</h3>
+				<div class="tsd-signature tsd-kind-icon">database<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
+					<p>Implementation of <a href="../interfaces/idatabase.html">IDatabase</a>.<a href="../interfaces/idatabase.html#databasearn">databaseArn</a></p>
+					<p>Overrides DatabaseBase.databaseArn</p>
 					<ul>
-						<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/iam.ts#L38">src/timestream/iam.ts:38</a></li>
+						<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/database.ts#L87">src/timestream/database.ts:87</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+				<a name="databasename" class="tsd-anchor"></a>
+				<h3>database<wbr>Name</h3>
+				<div class="tsd-signature tsd-kind-icon">database<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<p>Implementation of <a href="../interfaces/idatabase.html">IDatabase</a>.<a href="../interfaces/idatabase.html#databasename">databaseName</a></p>
+					<p>Overrides DatabaseBase.databaseName</p>
+					<ul>
+						<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/database.ts#L86">src/timestream/database.ts:86</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+				<a name="env" class="tsd-anchor"></a>
+				<h3>env</h3>
+				<div class="tsd-signature tsd-kind-icon">env<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ResourceEnvironment</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from <a href="database.html">Database</a>.<a href="database.html#env">env</a></p>
+					<ul>
+						<li>Defined in node_modules/@aws-cdk/core/lib/resource.d.ts:97</li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>All of database-related IAM actions.</p>
+						<p>The environment this resource belongs to.</p>
+					</div>
+					<p>For resources that are created and managed by the CDK
+						(generally, those created by creating new class instances like Role, Bucket, etc.),
+						this is always the same as the environment of the stack they belong to;
+						however, for imported resources
+						(those obtained from static methods like fromRoleArn, fromBucketName, etc.),
+					that might be different than the stack they were imported into.</p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+				<a name="node" class="tsd-anchor"></a>
+				<h3>node</h3>
+				<div class="tsd-signature tsd-kind-icon">node<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ConstructNode</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from <a href="database.html">Database</a>.<a href="database.html#node">node</a></p>
+					<ul>
+						<li>Defined in node_modules/@aws-cdk/core/lib/construct-compat.d.ts:54</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The construct tree node associated with this construct.</p>
 					</div>
 				</div>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias">
-				<a name="databasereadaction" class="tsd-anchor"></a>
-				<h3>Database<wbr>Read<wbr>Action</h3>
-				<div class="tsd-signature tsd-kind-icon">Database<wbr>Read<wbr>Action<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">databaseReadActions</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></div>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<a name="physicalname" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagProtected">Protected</span> physical<wbr>Name</h3>
+				<div class="tsd-signature tsd-kind-icon">physical<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
+					<p>Inherited from <a href="database.html">Database</a>.<a href="database.html#physicalname">physicalName</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/iam.ts#L28">src/timestream/iam.ts:28</a></li>
+						<li>Defined in node_modules/@aws-cdk/core/lib/resource.d.ts:109</li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Database-related read IAM actions.</p>
+						<p>(experimental) Returns a string-encoded token that resolves to the physical name that should be passed to the CloudFormation resource.</p>
+					</div>
+					<p>This value will resolve to one of the following:</p>
+					<ul>
+						<li>a concrete value (e.g. <code>&quot;my-awesome-bucket&quot;</code>)</li>
+						<li><code>undefined</code>, when a name should be generated by CloudFormation</li>
+						<li>a concrete name generated automatically during synthesis, in
+						cross-environment scenarios.</li>
+					</ul>
+					<dl class="tsd-comment-tags">
+						<dt>experimental</dt>
+						<dd></dd>
+					</dl>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+				<a name="stack" class="tsd-anchor"></a>
+				<h3>stack</h3>
+				<div class="tsd-signature tsd-kind-icon">stack<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Stack</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from <a href="database.html">Database</a>.<a href="database.html#stack">stack</a></p>
+					<ul>
+						<li>Defined in node_modules/@aws-cdk/core/lib/resource.d.ts:86</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The stack in which this resource is defined.</p>
 					</div>
 				</div>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias">
-				<a name="databasewriteaction" class="tsd-anchor"></a>
-				<h3>Database<wbr>Write<wbr>Action</h3>
-				<div class="tsd-signature tsd-kind-icon">Database<wbr>Write<wbr>Action<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">databaseWriteActions</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/iam.ts#L33">src/timestream/iam.ts:33</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Database-related write IAM actions.</p>
-					</div>
-				</div>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Methods</h2>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<a name="addtable" class="tsd-anchor"></a>
+				<h3>add<wbr>Table</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<li class="tsd-signature tsd-kind-icon">add<wbr>Table<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/addtableoptions.html" class="tsd-signature-type">AddTableOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/itable.html" class="tsd-signature-type">ITable</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Inherited from <a href="database.html">Database</a>.<a href="database.html#addtable">addTable</a></p>
+							<ul>
+								<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/database.ts#L62">src/timestream/database.ts:62</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Add a table to this database.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>id: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The name of created table</p>
+								</div>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/addtableoptions.html" class="tsd-signature-type">AddTableOptions</a></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The options to create table</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="../interfaces/itable.html" class="tsd-signature-type">ITable</a></h4>
+					</li>
+				</ul>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias">
-				<a name="globalaction" class="tsd-anchor"></a>
-				<h3>Global<wbr>Action</h3>
-				<div class="tsd-signature tsd-kind-icon">Global<wbr>Action<span class="tsd-signature-symbol">:</span> <a href="globals.html#globalwriteaction" class="tsd-signature-type">GlobalWriteAction</a><span class="tsd-signature-symbol"> | </span><a href="globals.html#globalreadaction" class="tsd-signature-type">GlobalReadAction</a></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/iam.ts#L23">src/timestream/iam.ts:23</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>All of non-resource-specific IAM actions.</p>
-					</div>
-				</div>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<a name="generatephysicalname" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagProtected">Protected</span> generate<wbr>Physical<wbr>Name</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<li class="tsd-signature tsd-kind-icon">generate<wbr>Physical<wbr>Name<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Inherited from <a href="database.html">Database</a>.<a href="database.html#generatephysicalname">generatePhysicalName</a></p>
+							<ul>
+								<li>Defined in node_modules/@aws-cdk/core/lib/resource.d.ts:119</li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+					</li>
+				</ul>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias">
-				<a name="globalreadaction" class="tsd-anchor"></a>
-				<h3>Global<wbr>Read<wbr>Action</h3>
-				<div class="tsd-signature tsd-kind-icon">Global<wbr>Read<wbr>Action<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">globalReadActions</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/iam.ts#L18">src/timestream/iam.ts:18</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>non-resource-specific read IAM actions.</p>
-					</div>
-				</div>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<a name="getresourcearnattribute" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Resource<wbr>Arn<wbr>Attribute</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Resource<wbr>Arn<wbr>Attribute<span class="tsd-signature-symbol">(</span>arnAttr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, arnComponents<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ArnComponents</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Inherited from <a href="database.html">Database</a>.<a href="database.html#getresourcearnattribute">getResourceArnAttribute</a></p>
+							<ul>
+								<li>Defined in node_modules/@aws-cdk/core/lib/resource.d.ts:143</li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>(experimental) Returns an environment-sensitive token that should be used for the resource&#39;s &quot;ARN&quot; attribute (e.g. <code>bucket.bucketArn</code>).</p>
+							</div>
+							<p>Normally, this token will resolve to <code>arnAttr</code>, but if the resource is
+								referenced across environments, <code>arnComponents</code> will be used to synthesize
+								a concrete ARN with the resource&#39;s physical name. Make sure to reference
+							<code>this.physicalName</code> in <code>arnComponents</code>.</p>
+							<dl class="tsd-comment-tags">
+								<dt>experimental</dt>
+								<dd></dd>
+							</dl>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>arnAttr: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The CFN attribute which resolves to the ARN of the resource.</p>
+								</div>
+							</li>
+							<li>
+								<h5>arnComponents: <span class="tsd-signature-type">ArnComponents</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The format of the ARN of this resource.</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+					</li>
+				</ul>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias">
-				<a name="globalwriteaction" class="tsd-anchor"></a>
-				<h3>Global<wbr>Write<wbr>Action</h3>
-				<div class="tsd-signature tsd-kind-icon">Global<wbr>Write<wbr>Action<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">globalWriteActions</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/iam.ts#L13">src/timestream/iam.ts:13</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>non-resource-specific write IAM actions.</p>
-					</div>
-				</div>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<a name="getresourcenameattribute" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Resource<wbr>Name<wbr>Attribute</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Resource<wbr>Name<wbr>Attribute<span class="tsd-signature-symbol">(</span>nameAttr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Inherited from <a href="database.html">Database</a>.<a href="database.html#getresourcenameattribute">getResourceNameAttribute</a></p>
+							<ul>
+								<li>Defined in node_modules/@aws-cdk/core/lib/resource.d.ts:130</li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>(experimental) Returns an environment-sensitive token that should be used for the resource&#39;s &quot;name&quot; attribute (e.g. <code>bucket.bucketName</code>).</p>
+							</div>
+							<p>Normally, this token will resolve to <code>nameAttr</code>, but if the resource is
+								referenced across environments, it will be resolved to <code>this.physicalName</code>,
+							which will be a concrete name.</p>
+							<dl class="tsd-comment-tags">
+								<dt>experimental</dt>
+								<dd></dd>
+							</dl>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>nameAttr: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The CFN attribute which resolves to the resource&#39;s name.</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+					</li>
+				</ul>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias">
-				<a name="tableaction" class="tsd-anchor"></a>
-				<h3>Table<wbr>Action</h3>
-				<div class="tsd-signature tsd-kind-icon">Table<wbr>Action<span class="tsd-signature-symbol">:</span> <a href="globals.html#tablereadaction" class="tsd-signature-type">TableReadAction</a><span class="tsd-signature-symbol"> | </span><a href="globals.html#tablewriteaction" class="tsd-signature-type">TableWriteAction</a></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/iam.ts#L53">src/timestream/iam.ts:53</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>All of table-related IAM actions.</p>
-					</div>
-				</div>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<a name="grant" class="tsd-anchor"></a>
+				<h3>grant</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<li class="tsd-signature tsd-kind-icon">grant<span class="tsd-signature-symbol">(</span>grantee<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IGrantable</span>, <span class="tsd-signature-symbol">...</span>actions<span class="tsd-signature-symbol">: </span><a href="../globals.html#databaseaction" class="tsd-signature-type">DatabaseAction</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Grant</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Inherited from <a href="database.html">Database</a>.<a href="database.html#grant">grant</a></p>
+							<ul>
+								<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/database.ts#L30">src/timestream/database.ts:30</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Adds an IAM policy statement associated with this table to an IAM principal&#39;s policy.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>grantee: <span class="tsd-signature-type">IGrantable</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The principal</p>
+								</div>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>actions: <a href="../globals.html#databaseaction" class="tsd-signature-type">DatabaseAction</a><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The set of actions to allow</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Grant</span></h4>
+					</li>
+				</ul>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias">
-				<a name="tablereadaction" class="tsd-anchor"></a>
-				<h3>Table<wbr>Read<wbr>Action</h3>
-				<div class="tsd-signature tsd-kind-icon">Table<wbr>Read<wbr>Action<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">tableReadActions</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/iam.ts#L43">src/timestream/iam.ts:43</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Table-related read IAM actions.</p>
-					</div>
-				</div>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<a name="grantread" class="tsd-anchor"></a>
+				<h3>grant<wbr>Read</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<li class="tsd-signature tsd-kind-icon">grant<wbr>Read<span class="tsd-signature-symbol">(</span>grantee<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IGrantable</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Grant</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Inherited from <a href="database.html">Database</a>.<a href="database.html#grantread">grantRead</a></p>
+							<ul>
+								<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/database.ts#L43">src/timestream/database.ts:43</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Permits an IAM principal all read operations from this table.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>grantee: <span class="tsd-signature-type">IGrantable</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The principal</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Grant</span></h4>
+					</li>
+				</ul>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias">
-				<a name="tablewriteaction" class="tsd-anchor"></a>
-				<h3>Table<wbr>Write<wbr>Action</h3>
-				<div class="tsd-signature tsd-kind-icon">Table<wbr>Write<wbr>Action<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">tableWriteActions</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/iam.ts#L48">src/timestream/iam.ts:48</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Table-related write IAM actions.</p>
-					</div>
-				</div>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<a name="grantwrite" class="tsd-anchor"></a>
+				<h3>grant<wbr>Write</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<li class="tsd-signature tsd-kind-icon">grant<wbr>Write<span class="tsd-signature-symbol">(</span>grantee<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IGrantable</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Grant</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Inherited from <a href="database.html">Database</a>.<a href="database.html#grantwrite">grantWrite</a></p>
+							<ul>
+								<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/database.ts#L52">src/timestream/database.ts:52</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Permits an IAM principal all write operations from this table.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>grantee: <span class="tsd-signature-type">IGrantable</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The principal</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Grant</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
+				<a name="onprepare" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Prepare</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
+					<li class="tsd-signature tsd-kind-icon">on<wbr>Prepare<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Inherited from <a href="database.html">Database</a>.<a href="database.html#onprepare">onPrepare</a></p>
+							<p>Overrides Construct.onPrepare</p>
+							<ul>
+								<li>Defined in node_modules/@aws-cdk/core/lib/construct-compat.d.ts:78</li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Perform final modifications before synthesis.</p>
+							</div>
+							<p>This method can be implemented by derived constructs in order to perform
+								final changes before synthesis. prepare() will be called after child
+							constructs have been prepared.</p>
+							<p>This is an advanced framework feature. Only use this if you
+							understand the implications.</p>
+						</div>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
+				<a name="onsynthesize" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Synthesize</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
+					<li class="tsd-signature tsd-kind-icon">on<wbr>Synthesize<span class="tsd-signature-symbol">(</span>session<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ISynthesisSession</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Inherited from <a href="database.html">Database</a>.<a href="database.html#onsynthesize">onSynthesize</a></p>
+							<p>Overrides Construct.onSynthesize</p>
+							<ul>
+								<li>Defined in node_modules/@aws-cdk/core/lib/construct-compat.d.ts:87</li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Allows this construct to emit artifacts into the cloud assembly during synthesis.</p>
+							</div>
+							<p>This method is usually implemented by framework-level constructs such as <code>Stack</code> and <code>Asset</code>
+							as they participate in synthesizing the cloud assembly.</p>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>session: <span class="tsd-signature-type">ISynthesisSession</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The synthesis session.</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
+				<a name="onvalidate" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagProtected">Protected</span> on<wbr>Validate</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
+					<li class="tsd-signature tsd-kind-icon">on<wbr>Validate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Inherited from <a href="database.html">Database</a>.<a href="database.html#onvalidate">onValidate</a></p>
+							<p>Overrides Construct.onValidate</p>
+							<ul>
+								<li>Defined in node_modules/@aws-cdk/core/lib/construct-compat.d.ts:67</li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Validate the current construct.</p>
+							</div>
+							<p>This method can be implemented by derived constructs in order to perform
+							validation logic. It is called on all constructs before synthesis.</p>
+						</div>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
+						<p>An array of validation error messages, or an empty array if the construct is valid.</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<a name="prepare" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagProtected">Protected</span> prepare</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<li class="tsd-signature tsd-kind-icon">prepare<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Inherited from <a href="database.html">Database</a>.<a href="database.html#prepare">prepare</a></p>
+							<ul>
+								<li>Defined in node_modules/@aws-cdk/core/lib/construct-compat.d.ts:107</li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Perform final modifications before synthesis.</p>
+							</div>
+							<p>This method can be implemented by derived constructs in order to perform
+								final changes before synthesis. prepare() will be called after child
+							constructs have been prepared.</p>
+							<p>This is an advanced framework feature. Only use this if you
+							understand the implications.</p>
+						</div>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<a name="synthesize" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagProtected">Protected</span> synthesize</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<li class="tsd-signature tsd-kind-icon">synthesize<span class="tsd-signature-symbol">(</span>session<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ISynthesisSession</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Inherited from <a href="database.html">Database</a>.<a href="database.html#synthesize">synthesize</a></p>
+							<ul>
+								<li>Defined in node_modules/@aws-cdk/core/lib/construct-compat.d.ts:116</li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Allows this construct to emit artifacts into the cloud assembly during synthesis.</p>
+							</div>
+							<p>This method is usually implemented by framework-level constructs such as <code>Stack</code> and <code>Asset</code>
+							as they participate in synthesizing the cloud assembly.</p>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>session: <span class="tsd-signature-type">ISynthesisSession</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The synthesis session.</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<a name="tostring" class="tsd-anchor"></a>
+				<h3>to<wbr>String</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<li class="tsd-signature tsd-kind-icon">to<wbr>String<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Inherited from <a href="database.html">Database</a>.<a href="database.html#tostring">toString</a></p>
+							<ul>
+								<li>Defined in node_modules/constructs/lib/construct.d.ts:268</li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Returns a string representation of this construct.</p>
+							</div>
+						</div>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<a name="validate" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagProtected">Protected</span> validate</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<li class="tsd-signature tsd-kind-icon">validate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Inherited from <a href="database.html">Database</a>.<a href="database.html#validate">validate</a></p>
+							<ul>
+								<li>Defined in node_modules/@aws-cdk/core/lib/construct-compat.d.ts:96</li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Validate the current construct.</p>
+							</div>
+							<p>This method can be implemented by derived constructs in order to perform
+							validation logic. It is called on all constructs before synthesis.</p>
+						</div>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
+						<p>An array of validation error messages, or an empty array if the construct is valid.</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+				<a name="fromdatabasearn" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagStatic">Static</span> from<wbr>Database<wbr>Arn</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<li class="tsd-signature tsd-kind-icon">from<wbr>Database<wbr>Arn<span class="tsd-signature-symbol">(</span>scope<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Construct</span>, id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, databaseArn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/idatabase.html" class="tsd-signature-type">IDatabase</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/database.ts#L108">src/timestream/database.ts:108</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Creates a Database construct represents an external database via database ARN.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>scope: <span class="tsd-signature-type">Construct</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The parent creating construct</p>
+								</div>
+							</li>
+							<li>
+								<h5>id: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The construct&#39;s name</p>
+								</div>
+							</li>
+							<li>
+								<h5>databaseArn: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The database&#39;s ARN</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="../interfaces/idatabase.html" class="tsd-signature-type">IDatabase</a></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+				<a name="grant-1" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagStatic">Static</span> grant</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<li class="tsd-signature tsd-kind-icon">grant<span class="tsd-signature-symbol">(</span>grantee<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IGrantable</span>, <span class="tsd-signature-symbol">...</span>actions<span class="tsd-signature-symbol">: </span><a href="../globals.html#globalaction" class="tsd-signature-type">GlobalAction</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Grant</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/database.ts#L122">src/timestream/database.ts:122</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Adds an IAM policy statement associated with no resources but related to Timestream database to an IAM principal&#39;s policy.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>grantee: <span class="tsd-signature-type">IGrantable</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The principal</p>
+								</div>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>actions: <a href="../globals.html#globalaction" class="tsd-signature-type">GlobalAction</a><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The set of actions to allow</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Grant</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+				<a name="grantread-1" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagStatic">Static</span> grant<wbr>Read</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<li class="tsd-signature tsd-kind-icon">grant<wbr>Read<span class="tsd-signature-symbol">(</span>grantee<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IGrantable</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Grant</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/database.ts#L135">src/timestream/database.ts:135</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Permits an IAM principal all read operations from Timestream database.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>grantee: <span class="tsd-signature-type">IGrantable</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The principal</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Grant</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+				<a name="grantwrite-1" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagStatic">Static</span> grant<wbr>Write</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<li class="tsd-signature tsd-kind-icon">grant<wbr>Write<span class="tsd-signature-symbol">(</span>grantee<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IGrantable</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Grant</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/aereal/aws-cdk-resources/blob/4df59c7/src/timestream/database.ts#L144">src/timestream/database.ts:144</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Permits an IAM principal all write operations from Timestream database.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>grantee: <span class="tsd-signature-type">IGrantable</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The principal</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Grant</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+				<a name="isconstruct" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagStatic">Static</span> is<wbr>Construct</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<li class="tsd-signature tsd-kind-icon">is<wbr>Construct<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">x</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Construct</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Inherited from <a href="database.html">Database</a>.<a href="database.html#isconstruct">isConstruct</a></p>
+							<ul>
+								<li>Defined in node_modules/@aws-cdk/core/lib/construct-compat.d.ts:50</li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Return whether the given object is a Construct.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>x: <span class="tsd-signature-type">any</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">x</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Construct</span></h4>
+					</li>
+				</ul>
 			</section>
 		</section>
 		<footer class="with-border-bottom">
