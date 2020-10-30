@@ -93,6 +93,9 @@ jobs:
         run: npm ci
       - name: lint
         uses: reviewdog/action-eslint@v1
+        with:
+          github_token: ${{ github.token }}
+          reporter: 'github-pr-check'
   coverage:
     needs: ci
     runs-on: ubuntu-latest

@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "author": "aereal <aereal@aereal.org>",
   "license": "MIT",
+  "main": "built/index.js",
+  "types": "built/index.d.ts",
   "prettier": {
     "trailingComma": "es5"
   },
@@ -38,10 +40,13 @@
     "build": "tsc -p .",
     "test": "jest",
     "test:ci": "jest --collectCoverage --coverageDirectory ./coverage",
-    "docs": "rm -rf docs/ && typedoc ./src",
+    "docs": "rm -rf docs/ && typedoc ./src/index.ts",
     "semantic-release": "semantic-release"
   },
   "peerDependencies": {
+    "@aws-cdk/aws-iam": "^1.70.0",
+    "@aws-cdk/aws-kms": "^1.70.0",
+    "@aws-cdk/aws-timestream": "^1.70.0",
     "@aws-cdk/core": "^1.70.0"
   },
   "devDependencies": {
@@ -64,11 +69,11 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "jest": "^26.6.0",
+    "jest": "^26.6.1",
     "prettier": "^2.1.2",
     "semantic-release": "^17.2.1",
     "ts-jest": "^26.4.3",
-    "typedoc": "^0.19.2",
+    "typedoc": "^0.17.0-3",
     "typescript": "^4.0.5"
   },
   "engines": {
