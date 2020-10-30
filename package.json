@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "author": "aereal <aereal@aereal.org>",
   "license": "MIT",
+  "main": "built/index.js",
+  "types": "built/index.d.ts",
   "prettier": {
     "trailingComma": "es5"
   },
