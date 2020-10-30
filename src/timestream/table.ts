@@ -14,7 +14,10 @@ abstract class TableBase extends Resource implements ITable {
   }
 
   /**
+   * Adds an IAM policy statement associated with this table to an IAM principal's policy.
    *
+   * @param grantee - The principal
+   * @param actions - The set of actions to allow
    */
   public grant(grantee: IGrantable, ...actions: TableAction[]): Grant {
     return Grant.addToPrincipal({
@@ -25,26 +28,36 @@ abstract class TableBase extends Resource implements ITable {
   }
 
   /**
+   * Permits an IAM principal all read operations from this table.
    *
+   * @param grantee - The principal
    */
   public grantRead(grantee: IGrantable): Grant {
     return this.grant(grantee, ...tableReadActions);
   }
 
   /**
+   * Permits an IAM principal all write operations from this table.
    *
+   * @param grantee - The principal
    */
   public grantWrite(grantee: IGrantable): Grant {
     return this.grant(grantee, ...tableWriteActions);
   }
 }
 
+/**
+ * Properties for a Timestream table
+ */
 export interface TableProps extends AddTableOptions {
+  /**
+   * A database that the table belongs to
+   */
   readonly database: IDatabase;
 }
 
 /**
- *
+ * Provides a Timestream table
  */
 export class Table extends TableBase {
   public readonly tableArn: string;
@@ -77,7 +90,11 @@ export class Table extends TableBase {
   }
 
   /**
+   * Creates a Table construct that represents an external table via table ARN.
    *
+   * @param scope - The parent creating construct
+   * @param id - The construct's name
+   * @param tableArn - The table's ARN
    */
   public static fromTableArn(
     scope: Construct,
