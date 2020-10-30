@@ -4,14 +4,13 @@ import { CfnDatabase } from "@aws-cdk/aws-timestream";
 import { Construct, Fn, Resource } from "@aws-cdk/core";
 import { AddTableOptions } from "./add-table-options";
 import { IDatabase } from "./database-ref";
+import { DatabaseAction, GlobalAction } from "./iam";
 import {
-  DatabaseAction,
-  GlobalAction,
   databaseReadActions,
   databaseWriteActions,
   globalReadActions,
   globalWriteActions,
-} from "./iam";
+} from "./internal/iam-actions";
 import { Table } from "./table";
 import { ITable } from "./table-ref";
 

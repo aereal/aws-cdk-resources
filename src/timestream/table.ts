@@ -3,7 +3,8 @@ import { CfnTable } from "@aws-cdk/aws-timestream";
 import { Construct, Fn, Resource } from "@aws-cdk/core";
 import { AddTableOptions } from "./add-table-options";
 import { IDatabase } from "./database-ref";
-import { TableAction, tableReadActions, tableWriteActions } from "./iam";
+import { TableAction } from "./iam";
+import { tableReadActions, tableWriteActions } from "./internal/iam-actions";
 import { ITable } from "./table-ref";
 
 abstract class TableBase extends Resource implements ITable {
