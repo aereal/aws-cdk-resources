@@ -1,1 +1,1 @@
-export * from "./empty-resource";
+export * from "./timestream";

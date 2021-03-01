@@ -1,8 +1,10 @@
 {
   "name": "@aereal/aws-cdk-resources",
-  "version": "0.0.1",
+  "version": "1.0.0-main.1",
   "author": "aereal <aereal@aereal.org>",
   "license": "MIT",
+  "main": "built/index.js",
+  "types": "built/index.d.ts",
   "prettier": {
     "trailingComma": "es5"
   },
@@ -38,24 +40,31 @@
     "build": "tsc -p .",
     "test": "jest",
     "test:ci": "jest --collectCoverage --coverageDirectory ./coverage",
-    "docs": "rm -rf docs/ && typedoc ./src",
+    "docs": "rm -rf docs/ && typedoc ./src/index.ts",
     "semantic-release": "semantic-release"
   },
   "peerDependencies": {
-    "@aws-cdk/core": "^1.70.0"
+    "@aws-cdk/aws-iam": "^1.91.0",
+    "@aws-cdk/aws-kms": "^1.91.0",
+    "@aws-cdk/aws-timestream": "^1.91.0",
+    "@aws-cdk/core": "^1.91.0"
   },
   "devDependencies": {
     "@aereal/eslint-config": "^0.1.4",
-    "@aws-cdk/assert": "^1.70.0",
-    "@aws-cdk/cloud-assembly-schema": "^1.70.0",
-    "@aws-cdk/core": "^1.70.0",
-    "@aws-cdk/cx-api": "^1.70.0",
+    "@aws-cdk/assert": "^1.91.0",
+    "@aws-cdk/aws-iam": "^1.91.0",
+    "@aws-cdk/aws-kms": "^1.91.0",
+    "@aws-cdk/aws-timestream": "^1.91.0",
+    "@aws-cdk/cloud-assembly-schema": "^1.91.0",
+    "@aws-cdk/core": "^1.91.0",
+    "@aws-cdk/cx-api": "^1.91.0",
+    "@aws-cdk/region-info": "^1.91.0",
     "@semantic-release/git": "^9.0.0",
     "@types/jest": "^26.0.15",
     "@types/node": "^14.14.5",
     "@typescript-eslint/eslint-plugin": "^4.6.0",
     "@typescript-eslint/parser": "^4.6.0",
-    "constructs": "^3.0.24",
+    "constructs": "^3.3.43",
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-import": "^2.22.1",
@@ -64,15 +73,12 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "jest": "^26.6.0",
+    "jest": "^26.6.3",
     "prettier": "^2.1.2",
     "semantic-release": "^17.2.1",
-    "ts-jest": "^26.4.3",
-    "typedoc": "^0.19.2",
-    "typescript": "^4.0.5"
-  },
-  "engines": {
-    "npm": ">= 7.0.6"
+    "ts-jest": "^26.5.2",
+    "typedoc": "^0.20.28",
+    "typescript": "^4.2.2"
   },
   "release": {
     "branches": [
