@@ -1,6 +1,6 @@
 {
   "name": "@aereal/aws-cdk-resources",
-  "version": "1.0.0-main.1",
+  "version": "1.0.0-main.2",
   "author": "aereal <aereal@aereal.org>",
   "license": "MIT",
   "main": "built/index.js",
