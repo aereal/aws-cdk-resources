@@ -6,7 +6,7 @@ import { Construct } from "@aws-cdk/core";
  * An SSM Parameter path representation.
  */
 export class ParameterPath extends Construct {
-  private readonly value: string;
+  public readonly value: string;
 
   constructor(scope: Construct, id: string, path: string) {
     super(scope, id);
