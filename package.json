@@ -51,7 +51,7 @@
     "@aws-cdk/core": "^1.99.0"
   },
   "devDependencies": {
-    "@aereal/eslint-config": "^0.1.4",
+    "@aereal/eslint-config": "^0.1.6",
     "@aws-cdk/assert": "^1.99.0",
     "@aws-cdk/aws-iam": "^1.99.0",
     "@aws-cdk/aws-kms": "^1.99.0",

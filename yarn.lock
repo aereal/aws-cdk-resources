@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@aereal/eslint-config@^0.1.4":
+"@aereal/eslint-config@^0.1.6":
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/@aereal/eslint-config/-/eslint-config-0.1.6.tgz#1433260d2d5ccf2c96e6f3b3d9c94f2a3585a3b3"
   integrity sha512-1WdF9hTPSv4SI3Ujw9zIkJMjeCVcMf8wmkm0/i4csqu6HUziLtrq2n8Ve0Ib9XIOj4ePjeYeHW+qotksb0LczQ==
